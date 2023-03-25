@@ -2,14 +2,14 @@ resource "aws_security_group" "alb" {
   name        = "${local.app}-alb"
   description = "For ALB."
   vpc_id      = module.vpc.vpc_id
-  ingress = {
+  ingress {
     description = "Allow HTTP from ALL."
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  egress = {
+  egress {
     description = "Allow all to outbound."
     from_port   = 0
     to_port     = 0
@@ -26,7 +26,7 @@ resource "aws_security_group" "ecs" {
   description = "For ECS."
   vpc_id      = module.vpc.vpc_id
   egress {
-    description = "Allow all to outbound"
+    description = "Allow all to outboun'.d"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
