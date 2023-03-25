@@ -26,7 +26,7 @@ resource "aws_security_group" "ecs" {
   description = "For ECS."
   vpc_id      = module.vpc.vpc_id
   egress {
-    description = "Allow all to outboun'.d"
+    description = "Allow all to outbound."
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
